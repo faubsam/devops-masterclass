@@ -1,0 +1,17 @@
+Connecting git with github and creating a new repo
+
+ssh-key -t ed25519 -C "<your-email>"
+ssh-add ~/.ssh/ed25519
+# add the key in github as a new key under the settings->ssh and gpg keys tab
+# test the connection
+ssh -T git@github.com
+# create a new repo in github 
+# copy the link for ssh connection on the repo home page
+sudo dnf install git
+mkdir <directory-name> && cd <directory-name>
+git init
+git remote add origin <link-from-github>
+# create test documents or directories
+git add .
+git push origin master
+ 
